@@ -2,7 +2,6 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   basePath: '/test',
-  // ❌ do not use assetPrefix
 };
 
 export default nextConfig;
