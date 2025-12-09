@@ -1,6 +1,7 @@
+import Navbar from "./Component/Navbar";
 import "./globals.css";
+import "./font.css";
 import { DevLinkProvider } from "@/devlink/DevLinkProvider";
-
 
 
 export default function RootLayout({
@@ -12,6 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <DevLinkProvider>
+          <Navbar/>
           {children}
         </DevLinkProvider>
       </body>
