@@ -1,7 +1,7 @@
 import "./globals.css";
 import "./font.css";
 import { DevLinkProvider } from "@/devlink/DevLinkProvider";
-import Navbar from "./Component/Navbar.tsx";
+import Navbar from "./component/Navbar";
 
 
 export default function RootLayout({

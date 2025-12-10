@@ -2,7 +2,7 @@
 
 import React from "react";
 import config from "../../next.config";
-import Button from "./Component/Button.tsx";
+import Button from "./component/Button";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
