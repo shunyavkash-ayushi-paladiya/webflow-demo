@@ -6,7 +6,10 @@ import Button from "./component/Button";
 import { useEffect } from "react";
 import { initSliders } from "./Script";
 import "@splidejs/splide/css";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+// page.tsx
+// @ts-ignore
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+
 
 const assetPrefix = config.assetPrefix || config.basePath || "";
 
