@@ -1,118 +1,109 @@
+"use client";
+
 import React from "react";
 import config from "../../next.config";
+import Button from "./Component/Button";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+
+
 
 const assetPrefix = config.assetPrefix || config.basePath || "";
 
 export default function Home() {
   return (
     <>
-      {/* hero section  */}
-
       <section className="hero-section">
         <img
-          src={`${assetPrefix}/images/hero-bg.png`}
+          src={`${assetPrefix}/images/hero-bg-1.avif`}
           alt="hero-bg"
-          className="hero-bg-img"
+          className="img-cover"
         />
         <div className="container">
-          <div className="hero-content">
-            <text className="hero-title">New Arrival</text>
-            <h1 className="hero-main-title">Discover Our New Collection</h1>
-            <p className="hero-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis.
-            </p>
-            <a href="#" className="hero-btn">
-              Buy Now
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* about section */}
-
-      <section className="about-section">
-        <div className="container">
-          <div className="about-content">
-            <h2 className="about-title">Browse The Range</h2>
-            <p className="about-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            </p>
-          </div>
-          <div className="about-wrapper">
-            <div className="about-content-card">
-              <img src={`${assetPrefix}/images/about-img-2.png`} alt="about-img-1" className="about-img"/>
-              <h3 className="about-card-title">
-                Dining
-              </h3>
+          <div className="hero-wrapper">
+            <div className="hero-content">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="icon icon-tabler icons-tabler-outline icon-tabler-heart-handshake"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                <path d="M12 6l-3.293 3.293a1 1 0 0 0 0 1.414l.543 .543c.69 .69 1.81 .69 2.5 0l1 -1a3.182 3.182 0 0 1 4.5 0l2.25 2.25" />
+                <path d="M12.5 15.5l2 2" />
+              </svg>
+              <h1 className="hero-title">Webflow Template</h1>
             </div>
-            <div className="about-content-card">
-              <img src={`${assetPrefix}/images/about-img-3.png`} alt="about-img-1" className="about-img"/>
-              <h3 className="about-card-title">
-                Living
-              </h3>
-            </div>
-            <div className="about-content-card">
-              <img src={`${assetPrefix}/images/about-img-1.png`} alt="about-img-1" className="about-img"/>
-              <h3 className="about-card-title">
-                Bedroom
-              </h3>
+            <h2 className="hero-main-title">
+              Elevate your website with <span> Archscale </span>
+            </h2>
+            <div className="hero-btn-content">
+              <Button/>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Product section  */}
-
-      <section className="product-section">
+      <section className="slider-section">
         <div className="container">
-           <h2 className="product-title">
-             Our Product
-           </h2>
-           <div className="product-wrapper">
-              <div className="product-card">
-                 <img src={`${assetPrefix}/images/product-img-3.png`} alt="product-img-1" className="img-cover product-img"/>
-                  <div className="product-content">
-                     <h3 className="product-card-title">
-                       Syltherine
-                     </h3>
-                     <p className="product-card-description">
-                       Stylish cafe chair
-                     </p>
-                     <h4 className="product-card-head">
-                       Rp 2500 <span> Rp 3500 </span>
-                     </h4>
-                  </div>
-              </div>
-              <div className="product-card">
-                 <img src={`${assetPrefix}/images/product-img-3.png`} alt="product-img-1" className="img-cover product-img"/>
-                  <div className="product-content">
-                     <h3 className="product-card-title">
-                       Syltherine
-                     </h3>
-                     <p className="product-card-description">
-                       Stylish cafe chair
-                     </p>
-                     <h4 className="product-card-head">
-                       Rp 2500 <span> Rp 3500 </span>
-                     </h4>
-                  </div>
-              </div>
-              <div className="product-card">
-                 <img src={`${assetPrefix}/images/product-img-3.png`} alt="product-img-1" className="img-cover product-img"/>
-                  <div className="product-content">
-                     <h3 className="product-card-title">
-                       Syltherine
-                     </h3>
-                     <p className="product-card-description">
-                       Stylish cafe chair
-                     </p>
-                     <h4 className="product-card-head">
-                       Rp 2500 <span> Rp 3500 </span>
-                     </h4>
-                  </div>
-              </div>
-           </div>
+           <Splide 
+          options={{
+            type: 'loop',
+            perPage: 7,
+            gap: '20px',
+            autoplay: true,
+            interval: 3000,
+            arrows: false,
+            pagination: false,
+            speed: 600,
+            breakpoints: {
+              1200: { perPage: 5, gap: '15px' },
+              768: { perPage: 3, gap: '10px' },
+              480: { perPage: 2, gap: '5px' },
+              320: { perPage: 1.5, gap: '5px' },
+            },
+          }}
+          aria-label="Beautiful Images"
+        >
+          <SplideSlide>
+            <img src="https://ik.imagekit.io/fa1ylzjml/logoipsum-369%20(1).svg?updatedAt=1759905082403" alt="Slide 1" className="slider-img" />
+          </SplideSlide>
+
+          <SplideSlide>
+            <img src="https://ik.imagekit.io/fa1ylzjml/logoipsum-385%20(1).svg?updatedAt=1759905081430" alt="Slide 2" className="slider-img"/>
+          </SplideSlide>
+
+          <SplideSlide>
+            <img src="https://ik.imagekit.io/fa1ylzjml/logoipsum-393%20(1).svg?updatedAt=1759905081370" alt="Slide 3" className="slider-img"/>
+          </SplideSlide>
+
+          <SplideSlide>
+            <img src="https://ik.imagekit.io/fa1ylzjml/logoipsum-372%20(1).svg?updatedAt=1759905081278" alt="Slide 4" className="slider-img"/>
+          </SplideSlide>
+
+          <SplideSlide>
+            <img src="https://ik.imagekit.io/fa1ylzjml/logoipsum-391%20(1).svg?updatedAt=1759905081234" alt="Slide 5" className="slider-img"/>
+          </SplideSlide>
+
+          <SplideSlide>
+            <img src="https://ik.imagekit.io/fa1ylzjml/logoipsum-395%20(1).svg?updatedAt=1759905081174" alt="Slide 6" className="slider-img"/>
+          </SplideSlide>
+
+          <SplideSlide>
+            <img src="https://ik.imagekit.io/fa1ylzjml/logoipsum-373%20(1).svg?updatedAt=1759905080890" alt="Slide 7" className="slider-img"/>
+          </SplideSlide>
+
+          <SplideSlide>
+            <img src="https://ik.imagekit.io/fa1ylzjml/logoipsum-369%20(1).svg?updatedAt=1759905082403" alt="Slide 1" className="slider-img" />
+          </SplideSlide>
+        </Splide> 
         </div>
       </section>
     </>
