@@ -206,6 +206,19 @@ export default function Home() {
                 </svg>
                 <h1 className="hero-title">Services Overview</h1>
               </div>
+              <h2 className="service-title">
+                Effective <span> Showcase </span> Your Services
+              </h2>
+            </div>
+            <div className="service-content-3">
+              <p className="service-description">
+                Archscale helps you organize and present your services in a way
+                that builds trust and encourages engagement.
+              </p>
+              <div className="btn-wrappers">
+                <Button/>
+                <Button/>
+              </div>
             </div>
           </div>
         </div>

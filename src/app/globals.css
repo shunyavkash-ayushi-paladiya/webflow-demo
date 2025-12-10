@@ -344,6 +344,42 @@ header {
   padding-bottom: 150px;
 }
 
+.service-title{
+  font-size: 60px;
+  color: var(--black);
+  line-height: 1.1;
+  font-weight: 500;
+  max-width: 650px;
+  margin-top: 20px;
+}
+
+.service-title span{
+  font-family:  "Lora", serif;
+}
+
+.service-wrapper{
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.service-content-3{
+  max-width: 500px;
+}
+
+.service-description{
+  font-size: 16px;
+  color: #433c39;
+}
+
+.btn-wrappers{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
 @media screen and (max-width:1024px) {
   .hero-main-title {
     font-size: 52px;
