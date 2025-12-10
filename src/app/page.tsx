@@ -4,14 +4,13 @@ import React from "react";
 import config from "../../next.config";
 import Button from "./component/Button";
 import { useEffect } from "react";
-import { initSliders } from "./Script"; 
+import { initSliders } from "./Script";
 import "@splidejs/splide/css";
-
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 
 const assetPrefix = config.assetPrefix || config.basePath || "";
 
 export default function Home() {
-
   useEffect(() => {
     initSliders();
   }, []);
@@ -49,7 +48,7 @@ export default function Home() {
               Elevate your website with <span> Archscale </span>
             </h2>
             <div className="hero-btn-content">
-              <Button/>
+              <Button />
             </div>
           </div>
         </div>
@@ -57,7 +56,63 @@ export default function Home() {
 
       <section className="slider-section">
         <div className="container">
-            
+          <Splide
+            options={{
+              type: "loop",
+              perPage: 7,
+              gap: "20px",
+              autoplay: true,
+              interval: 200,
+              arrows: false,
+              pagination: false,
+              speed: 600,
+              breakpoints: {
+                1200: { perPage: 5, gap: "15px" },
+                768: { perPage: 3, gap: "10px" },
+                480: { perPage: 2, gap: "5px" },
+                320: { perPage: 1.5, gap: "5px" },
+              },
+            }}
+            aria-label="My Favorite Images"
+            className="slider-splide splide"
+          >
+            <SplideSlide className="slider-slide">
+              <img
+                src={`${assetPrefix}/images/slider-img-1.svg`}
+                alt="slider-img"
+              />
+            </SplideSlide>
+            <SplideSlide className="slider-slide">
+              <img
+                src={`${assetPrefix}/images/slider-img-2.svg`}
+                alt="slider-img"
+              />
+            </SplideSlide>
+            <SplideSlide className="slider-slide">
+              <img
+                src={`${assetPrefix}/images/slider-img-3.svg`}
+                alt="slider-img"
+              />
+            </SplideSlide>
+            <SplideSlide className="slider-slide">
+              <img
+                src={`${assetPrefix}/images/slider-img-1.svg`}
+                alt="slider-img"
+              />
+            </SplideSlide>
+            <SplideSlide className="slider-slide">
+              <img
+                src={`${assetPrefix}/images/slider-img-2.svg`}
+                alt="slider-img"
+              />
+            </SplideSlide>
+            <SplideSlide className="slider-slide">
+              <img
+                src={`${assetPrefix}/images/slider-img-3.svg`}
+                alt="slider-img"
+              />
+            </SplideSlide>
+          </Splide>
         </div>
       </section>
     </>

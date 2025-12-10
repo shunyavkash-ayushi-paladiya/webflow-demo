@@ -235,10 +235,18 @@ header {
 }
 
 .slider-section{
-  background-color: var(--white);
+  background-color: var(--color-gray-200);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom: 1px solid var(--color-gray-400);
+  padding: 50px 0px;
+  margin-top: -50px;
+  position: relative;
+}
+
+.slider-slide{
+  border-right: 1px solid var(--color-gray-400);
+  padding-inline: 20px;
 }
 
 @media screen and (max-width:1024px){
