@@ -3,7 +3,7 @@
 import React from "react";
 import config from "../../next.config";
 import Button from "./component/Button";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+// import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
 
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="slider-section">
+      {/* <section className="slider-section">
         <div className="container">
            <Splide 
           options={{
@@ -105,7 +105,7 @@ export default function Home() {
           </SplideSlide>
         </Splide> 
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
