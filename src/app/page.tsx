@@ -71,7 +71,46 @@ export default function Home() {
            </h2>
            <div className="product-wrapper">
               <div className="product-card">
-                 
+                 <img src={`${assetPrefix}/images/product-img-3.png`} alt="product-img-1" className="img-cover product-img"/>
+                  <div className="product-content">
+                     <h3 className="product-card-title">
+                       Syltherine
+                     </h3>
+                     <p className="product-card-description">
+                       Stylish cafe chair
+                     </p>
+                     <h4 className="product-card-head">
+                       Rp 2500 <span> Rp 3500 </span>
+                     </h4>
+                  </div>
+              </div>
+              <div className="product-card">
+                 <img src={`${assetPrefix}/images/product-img-3.png`} alt="product-img-1" className="img-cover product-img"/>
+                  <div className="product-content">
+                     <h3 className="product-card-title">
+                       Syltherine
+                     </h3>
+                     <p className="product-card-description">
+                       Stylish cafe chair
+                     </p>
+                     <h4 className="product-card-head">
+                       Rp 2500 <span> Rp 3500 </span>
+                     </h4>
+                  </div>
+              </div>
+              <div className="product-card">
+                 <img src={`${assetPrefix}/images/product-img-3.png`} alt="product-img-1" className="img-cover product-img"/>
+                  <div className="product-content">
+                     <h3 className="product-card-title">
+                       Syltherine
+                     </h3>
+                     <p className="product-card-description">
+                       Stylish cafe chair
+                     </p>
+                     <h4 className="product-card-head">
+                       Rp 2500 <span> Rp 3500 </span>
+                     </h4>
+                  </div>
               </div>
            </div>
         </div>
